@@ -73,4 +73,8 @@ h3{
   height: 500px;
   width: 800px;
   border-radius: 15px;
+  display: flexbox;
+  padding: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

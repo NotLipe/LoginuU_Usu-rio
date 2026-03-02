@@ -15,8 +15,22 @@ function UserProviderComponent({ children }){
     </UserProvider.Provider>
   )
 }
+
+const InBoxProvider = createContext();
+
+function InBoxProviderComponent({ children }){
+  const [email, setEmail] = useState("Oi sumido, responde meu email")
+  const [isEmailNew, setIsEmailNew] = useState(true)
+
+  return(
+    <InBoxProvider.Provider value={{email, setEmail, isEmailNew, setIsEmailNew}}>
+      {children}
+    </InBoxProvider.Provider>
+  )
+}
+
 function UserData(){
-  const {user, setUser, password, setPassword, isUserCorrect, setIsUserCorrect, isPasswordCorrect, setIsPasswordCorrect } = useContext(UserProvider)
+  const {user, setUser, password, setPassword, isUserCorrect, setIsUserCorrect, isPasswordCorrect, setIsPasswordCorrect, email, setEmail, isEmailNew, setIsEmailNew } = useContext(UserProvider, InBoxProvider)
   
     return(
       <>
@@ -49,7 +63,12 @@ function UserData(){
               Seja bem vindo {user}
             </h1>
             <div className='inbox'>
-              caixa de entrada
+              <p>
+                caixa de entrada
+              </p> <br />
+              <h2>
+                menssagem:{email}
+              </h2>
             </div>
           </>
         )}
@@ -60,7 +79,9 @@ export default function App(){
   return(
     <>
       <UserProviderComponent>
-        <UserData/>
+        <InBoxProviderComponent>
+          <UserData/>
+        </InBoxProviderComponent>
       </UserProviderComponent>
     </>
   )

@@ -1,0 +1,68 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card{
+  background: rgb(235, 235, 235);
+  height: 670px;
+  width: 500px;
+  border-radius: 40px;
+  display: flexbox;
+  align-items: center;
+  padding: 20px;
+}
+
+h1{
+  color: black;
+  margin-bottom: 30px;
+}
+
+.correctName{
+  color: white;
+}
+
+.userId{
+  background: black;
+  height: 190px;
+  width: 190px;
+  border-radius: 100px;
+  margin-left: 150px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  outline: auto;
+  outline-color: blueviolet;
+}
+
+.data{
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBox{
+  height: 30px;
+  width: 250px;
+  border-radius: 20px;
+  outline: auto;
+}
+
+
+body{
+  background: darkmagenta;
+}
+
+h3{
+  color: black;
+}
+
+.handleButton{
+  height: 70px;
+  width: 120px;
+  border-radius: 30px;
+  background-color: blueviolet;
+}

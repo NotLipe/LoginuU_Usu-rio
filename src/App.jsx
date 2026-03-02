@@ -36,7 +36,7 @@ function UserData(){
               <br /> <br /> <br /> <br />
               <button className='handleButton' onClick={()=>{
                 if(user == "Felipe", password == "fp123") setIsUserCorrect(true), setIsPasswordCorrect(true), console.log("deu certo")
-                else{console.log("Dados Incorretos")}
+                else{alert("Dados Incorretos!")}
                 }}>
                 Log-In
               </button>
@@ -44,9 +44,14 @@ function UserData(){
           </div>
         )}
         {isUserCorrect && (
-          <h1 className='correctName'>
-            Seja bem vindo Felipe
-          </h1>
+          <>
+            <h1 className='correctName'>
+              Seja bem vindo {user}
+            </h1>
+            <div className='inbox'>
+              caixa de entrada
+            </div>
+          </>
         )}
       </>
     )
